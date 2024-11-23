@@ -3,8 +3,8 @@
 
 const { buildModule } = require("@nomicfoundation/hardhat-ignition/modules");
 
-const JAN_1ST_2030 = 1893456000;
-const ONE_GWEI = 1_000_000_000n;
+const JAN_1ST_2030 = 1893456000; // 기본 잠금해제 타임스탬프 2023년 1월 1일
+const ONE_GWEI = 1_000_000_000n; // 1 Gwei
 
 module.exports = buildModule("LockModule", (m) => {
   const unlockTime = m.getParameter("unlockTime", JAN_1ST_2030);
